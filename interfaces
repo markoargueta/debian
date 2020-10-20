@@ -1,6 +1,12 @@
-# ESCRIBIR LO SIGUIENTE AL FINAL DEL ARCHIVO /etc/network/interfaces
+#CONFIGURACIÓN REALIZADA EN DEBIAN GNU/LINUX 9 SIN INTERFAZ GRÁFICA (PUEDE FUNCIONAR EN OTRAS DISTRIBUCIONES TAMBIÉN).
 
-#IP FIJA A RED WI-FI Y QUE SE CONECTE AUTOMATICAMENTE AL ENCENDER LA LAPTOP
+# ESCRIBIR LO SIGUIENTE AL FINAL DEL ARCHIVO /etc/network/interfaces
+# Seleccionar la opción dependiendo de la interfaz a configurar.
+
+# Los nombres de las interfaces pueden cambiar (verificar el nombre de tu interfaz antes de configurar).
+# Los rangos de ip también pueden variar, verificar tu red antes de configurar.
+
+#IP FIJA A RED WI-FI Y QUE SE CONECTE AUTOMATICAMENTE AL ENCENDER LA LAPTOP,PC Ó SERVIDOR.
 auto wlan0
 iface wlan0 inet static
         address 192.168.0.10
@@ -10,3 +16,16 @@ iface wlan0 inet static
         gateway 192.168.0.1
         wpa-ssid #NOMBRE DE LA RED WI-FI
         wpa-psk #CONTRASEÑA DE LA RED WI-FI
+    
+#IP DINÁMICA (DHCP) EN INTERFAZ CABLEADA (enp0s3)
+auto enp0s3
+iface enp0s3 inet dhcp
+
+#IP ESTÁTICA (FIJA) EN INTERFAZ CABLEADA (enp0s3)
+auto enp0s3
+iface enp0s3 inet static
+        address 192.168.0.10
+        netmask 255.255.255.0
+        network 192.168.0.1
+        broadcast 192.168.0.255
+        gateway 192.168.0.1
