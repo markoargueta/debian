@@ -1,0 +1,8 @@
+Archivos (firmware) necesarios para la tarjeta de red usb wifi ralink technology corp. rt2870/rt3070 wireless adapter
+
+Copiar los dos archivos en /lib/firmware/ usando el siguiente comando como superusuario:
+cp rt2870.bin rt3070.bin /lib/firmware/
+
+Con eso es suficiente para que funcione, no se necesitan drivers adicionales.
+
+Probado en Debian 9 Stretch.
