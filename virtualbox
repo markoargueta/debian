@@ -1,6 +1,7 @@
 Conectar dispositivos USB en VirtualBox usando Debian
 
-Los comandos siguientes son necesarios cuando necesitamos conectar o compartir un dispositivo USB en nuestra máquina virtual, como puede ser er una memoria USB o una Impresora, etc. en mi caso una Antena WiFi USB.
+Los comandos siguientes son necesarios cuando necesitamos conectar o compartir un dispositivo USB en nuestra máquina virtual,
+como puede ser er una memoria USB o una Impresora, etc. en mi caso una Antena WiFi USB.
 
 Usar el siguiente comando como superusuario:
 usermod -aG vboxusers tunombredeusuario
